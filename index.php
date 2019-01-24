@@ -189,7 +189,6 @@ $appName = explode('.', $domain)[0];
                         echo '<p><a alt="Publish Item" class="btn disable" href="#">Publish Item</a> </p>';
                     }
                     ?>
-                    ?>
 
                 </div>
 
