@@ -122,13 +122,22 @@ $appName = explode('.', $domain)[0];
                     } else {
                         echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Authenticate</a></p>';
                     }
-                    ?>
-
+                    
                 </div>
                 <div class="col-sm-6 col-md-6">
                     <h3>Get site</h3>
                     <p>Make a simple GET to <a href="https://api.mercadolibre.com/sites">sites resource</a> with your <b>$site_id</b> to obtain information about a a site. Like id, name, currencies, categories, and other settings.</p>
                     <p><a class="btn" href="../examples/example_get.php">GET</a></p>
+                         <?php
+require '../Meli/meli.php';
+require '../configApp.php';
+$meli = new Meli($appId, $secretKey);
+$params = array();
+$url = '/sites/' . $siteId;
+$result = $meli->get($url, $params);
+echo '<pre>';
+print_r($result);
+echo '</pre>';
                 </div>
             </div>
             <hr>
