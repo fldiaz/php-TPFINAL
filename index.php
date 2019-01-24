@@ -179,18 +179,10 @@ $appName = explode('.', $domain)[0];
                         $url = '/sites/' . $siteId;
                         $response = $meli->get($url, $params, array('access_token' => $_SESSION['access_token']));
                         // We call the post request to list a item
-                        echo "<h4>Response</h4>";
-                        echo '<pre class="pre-item">';
-                        print_r ($response);
+                        echo '<pre>';
+                        print_r($result);
                         echo '</pre>';
-                        echo "<h4>Success! Your test item was listed!</h4>";
-                        echo "<p>Go to the permalink to see how it's looking in our site.</p>";
-                        echo '<a target="_blank" href="'.$response["body"]->permalink.'">'.$response["body"]->permalink.'</a><br />';
-                    } else if($_GET['code']) {
-                        echo '<p><a alt="Publish Item" class="btn" href="/?code='.$_GET['code'].'&publish_item=ok">Publish Item</a></p>';
-                    } else {
-                        echo '<p><a alt="Publish Item" class="btn disable" href="#">Publish Item</a> </p>';
-                    }
+                        echo '</pre>';
                     ?>
 
                 </div>
