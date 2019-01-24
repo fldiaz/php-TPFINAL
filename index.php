@@ -175,12 +175,12 @@ $appName = explode('.', $domain)[0];
                             }
                         }
                         // We construct the item to POST
-                        $params = array();
+                        $params = 202593498;
                         $url = '/sites/' . $siteId;
-                        $response = $meli->get($url, $params, array('access_token' => $_SESSION['access_token']));
+                        $response = $meli->get('/users', $params, array('access_token' => $_SESSION['access_token']));
                         // We call the post request to list a item
                         echo '<pre>';
-                        print_r($result);
+                        print_r($response);
                         echo '</pre>';
                 
                   } else if($_GET['code']) {
