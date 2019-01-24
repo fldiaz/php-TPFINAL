@@ -135,18 +135,7 @@ $appName = explode('.', $domain)[0];
             <div class="row">
                 <div class="col-md-6">
                     <h3>Publish an Item</h3>
-                    <p>
-                       <?php
-require '../Meli/meli.php';
-require '../configApp.php';
-$meli = new Meli($appId, $secretKey);
-$params = array();
-$url = '/sites/' . $siteId;
-$result = $meli->get($url, $params);
-echo '<pre>';
-print_r($result);
-echo '</pre>';
-                        This is a example of how to list an item in <b>MLB</b> (Brasil).
+                    <p> This is a example of how to list an item in <b>MLB</b> (Brasil).
                        <br /> <b>You need to be authenticated to make it work.</b>
                        <br /> To be able to list an item in another country, <a href="https://github.com/mercadolibre/php-sdk/blob/master/examples/example_list_item.php">please update this file</a>, with values according to the site Id where your app works, like <b>category_id</b> and <b>currency</b>.
                      <br />
