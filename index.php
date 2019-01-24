@@ -182,7 +182,13 @@ $appName = explode('.', $domain)[0];
                         echo '<pre>';
                         print_r($result);
                         echo '</pre>';
-                        echo '</pre>';
+                
+                  } else if($_GET['code']) {
+                        echo '<p><a alt="Publish Item" class="btn" href="/?code='.$_GET['code'].'&publish_item=ok">Publish Item</a></p>';
+                  } else {
+                        echo '<p><a alt="Publish Item" class="btn disable" href="#">Publish Item</a> </p>';
+                    }
+                    ?>
                     ?>
 
                 </div>
