@@ -40,9 +40,9 @@ $appName = explode('.', $domain)[0];
         </div>
 
         <main class="container">
-            <h3>Hola!</h3>
-            <p>En primer lugar, muchas gracias por ayudarme. Estoy realizando el trabajo final de la Especialización en Ciencia de Datos en el ITBA.
-            Este trabajo tiene como objetivo identificar otras variables informativas que permitan mejorar o complementar el perfil crediticio de las personas que no acceden a servicios financieros formales, en pos de una mayor inclusión financiera.</p>
+            <h3>Hola!En primer lugar, muchas gracias por ayudarme.</h3>
+            <h3>Estoy realizando el trabajo final de la Especialización en Ciencia de Datos en el ITBA.</h3>
+            <h3>Este trabajo tiene como objetivo identificar otras variables informativas que permitan mejorar o complementar el perfil crediticio de las personas que no acceden a servicios financieros formales, en pos de una mayor inclusión financiera.</h3>
 
             <div class="row">
                 <div class="col-md-6">
