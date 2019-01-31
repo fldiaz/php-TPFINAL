@@ -47,7 +47,7 @@ $appName = explode('.', $domain)[0];
             <h4>Hola! En primer lugar, muchas gracias por ayudarme.</h4>
             <h4>Estoy realizando el trabajo final de la Especialización en Ciencia de Datos en el ITBA.</h4>
             <h4>Este trabajo tiene como objetivo identificar otras variables informativas que permitan mejorar o complementar el perfil crediticio de las personas que no acceden a servicios financieros formales, en pos de una mayor inclusión financiera.</h4>
-            <h4>Simplemente necesito que me brindes autorización para recopilar tus datos relacionados con tu reputación sobre las compras y ventas realizdas a través de Mercado Libre, y así poder comprobar si esta información ayuda a mejorar el perfil crediticio de un individuo</h4>
+            <h4>Simplemente necesito que me brindes autorización para recopilar datos relacionados con tu reputación sobre las compras y ventas realizdas a través de Mercado Libre, y así poder comprobar si esta información ayuda a mejorar el perfil crediticio de un individuo.</h4>
                 
         
         <center>SOLO TENDRE ACCESO POR 6 HORAS, LUEGO EL PERMISO CADUCA</center>
@@ -113,9 +113,9 @@ $appName = explode('.', $domain)[0];
                             }
                         }
                         // We construct the item to POST
-                        $params = 202593498;
+                        $params = array();
                         $url = '/sites/' . $siteId;
-                        $response = $meli->get('/users', $params, array('access_token' => $_SESSION['access_token']));
+                        $result = $meli->get('/users', $params, array('access_token' => $_SESSION['access_token']));
                         // We call the post request to list a item
                         echo '<pre>';
                         print_r($response);
