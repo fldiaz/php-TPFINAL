@@ -47,15 +47,16 @@ $appName = explode('.', $domain)[0];
             <h4>Hola! En primer lugar, muchas gracias por ayudarme.</h4>
             <h4>Estoy realizando el trabajo final de la Especialización en Ciencia de Datos en el ITBA.</h4>
             <h4>Este trabajo tiene como objetivo identificar otras variables informativas que permitan mejorar o complementar el perfil crediticio de las personas que no acceden a servicios financieros formales, en pos de una mayor inclusión financiera.</h4>
-            <h4>Simplemente necesito que me brindes autorización para recopilar tus datos relacionados con tu reputación sobre tus compras y ventas en Mercado Libre, y así poder comprobar si esta información ayudan a mejorar el perfil crediticio de un individuo</h4>
+            <h4>Simplemente necesito que me brindes autorización para recopilar tus datos relacionados con tu reputación sobre las compras y ventas realizdas a través de Mercado Libre, y así poder comprobar si esta información ayuda a mejorar el perfil crediticio de un individuo</h4>
                 el perfil crediticio de un individuo.</h4>
-        <p>SOLO TENDRE ACCESO POR 6 HORAS, LUEGO EL PERMISO CADUCA</p>
+        
+        <center>SOLO TENDRE ACCESO POR 6 HORAS, LUEGO EL PERMISO CADUCA</center>
 
             <hr>
             <div class="row">
                 <div class="col-sm-6 col-md-6">
-                    <h3>oAuth</h3>
-                    <p>First authenticate yourself. Authentication is the key to get the most ouf Mercado Libre's API.</p>
+                    <h3>Autorización</h3>
+                    <p></p>
 
                     <?php
                     $meli = new Meli($appId, $secretKey);
@@ -92,45 +93,8 @@ $appName = explode('.', $domain)[0];
                     ?>
 
                 </div>
-                <div class="col-sm-6 col-md-6">
-                    <h3>Get site</h3>
-                    <p>Make a simple GET to <a href="https://api.mercadolibre.com/sites">sites resource</a> with your <b>$site_id</b> to obtain information about a a site. Like id, name, currencies, categories, and other settings.</p>
-                    <p><a class="btn" href="../examples/example_get.php">GET</a></p>
-                </div>
             </div>
             <hr>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Publish an Item</h3>
-                    <p>
-                        This is a example of how to list an item in <b>MLB</b> (Brasil).
-                       <br /> <b>You need to be authenticated to make it work.</b>
-                       <br /> To be able to list an item in another country, <a href="https://github.com/mercadolibre/php-sdk/blob/master/examples/example_list_item.php">please update this file</a>, with values according to the site Id where your app works, like <b>category_id</b> and <b>currency</b>.
-                     <br />
-                    </p>
-                    <pre class="pre-item">
-"title" => "Item De Teste - Por Favor, Não Ofertar! --kc:off",
-        "category_id" => "MLB1227",
-        "price" => 10,
-        "currency_id" => "BRL",
-        "available_quantity" => 1,
-        "buying_mode" => "buy_it_now",
-        "listing_type_id" => "bronze",
-        "condition" => "new",
-        "description" => "Item de Teste. Mercado Livre's PHP SDK.",
-        "video_id" => "RXWn6kftTHY",
-        "warranty" => "12 month",
-        "pictures" => array(
-            array(
-                "source" => "https://upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg"
-            ),
-            array(
-                "source" => "https://upload.wikimedia.org/wikipedia/commons/a/ab/Teashades.gif"
-            )
-        )
-    )
-                    </pre>
-
                     <?php
                     $meli = new Meli($appId, $secretKey);
                     if($_GET['code']) {
