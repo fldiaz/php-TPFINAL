@@ -40,10 +40,11 @@ $appName = explode('.', $domain)[0];
         </div>
 
         <main class="container">
-            <h3>Hola!En primer lugar, muchas gracias por ayudarme.</h3>
-            <h3>Estoy realizando el trabajo final de la Especialización en Ciencia de Datos en el ITBA.</h3>
-            <h3>Este trabajo tiene como objetivo identificar otras variables informativas que permitan mejorar o complementar el perfil crediticio de las personas que no acceden a servicios financieros formales, en pos de una mayor inclusión financiera.</h3>
-
+            <h4>Hola! En primer lugar, muchas gracias por ayudarme.</h4>
+            <h4>Estoy realizando el trabajo final de la Especialización en Ciencia de Datos en el ITBA.</h4>
+            <h4>Este trabajo tiene como objetivo identificar otras variables informativas que permitan mejorar o complementar el perfil crediticio de las personas que no acceden a servicios financieros formales, en pos de una mayor inclusión financiera.</h4>
+            <p> Simplemente necesito que me brindes autorización para recopilar tus datos relacionados con tu reputación sobre tus compras y ventas en Mercado Libre, y así poder construir un modelo que permita analizar si las fuentes alternativas de información pueden mejorar
+                el perfil crediticio de un individuo.</h4>
             <div class="row">
                 <div class="col-md-6">
                     <h3>How it works?</h3>
