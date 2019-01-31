@@ -34,8 +34,12 @@ $appName = explode('.', $domain)[0];
 
         <div class="header">
             <div>
-                <h1>TRABAJO FINAL ESPECIALIZACIÓN EN CIENCIA DE DATOS</h1>
-                <h2>Uso de información alternativa en la evaluación del perfil crediticio mediante modelos de aprendizaje automáticos</h2>
+                <h1>Uso de información alternativa en la evaluación del perfil crediticio mediante modelos de aprendizaje automáticos</h1>
+                <h2>TRABAJO FINAL</h2>
+                <h2>ESPECIALIZACIÓN EN CIENCIA DE DATOS</h2>
+                <p>Alumna: Lic. Florencia Díaz</p>
+                <p>Tutora del TFI: Dra. Silvia Gómez</p>
+
             </div>
         </div>
 
@@ -43,42 +47,10 @@ $appName = explode('.', $domain)[0];
             <h4>Hola! En primer lugar, muchas gracias por ayudarme.</h4>
             <h4>Estoy realizando el trabajo final de la Especialización en Ciencia de Datos en el ITBA.</h4>
             <h4>Este trabajo tiene como objetivo identificar otras variables informativas que permitan mejorar o complementar el perfil crediticio de las personas que no acceden a servicios financieros formales, en pos de una mayor inclusión financiera.</h4>
-            <p> Simplemente necesito que me brindes autorización para recopilar tus datos relacionados con tu reputación sobre tus compras y ventas en Mercado Libre, y así poder construir un modelo que permita analizar si las fuentes alternativas de información pueden mejorar
+            <h4>Simplemente necesito que me brindes autorización para recopilar tus datos relacionados con tu reputación sobre tus compras y ventas en Mercado Libre, y así poder comprobar si esta información ayudan a mejorar el perfil crediticio de un individuo</h4>
                 el perfil crediticio de un individuo.</h4>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>How it works?</h3>
-                    <ul>
-                        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/go-getting-started">Heroku Button</a> on the repository.</li>
-                        <li>When Heroku received the source code it used the go tool chain to compile the application along with any vendored dependencies and created a deployable slug.</li>
-                        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-                        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h3>Next steps</h3>
-                    <p>To start, <a href="https://developers.mercadolibre.com.ar/apps/home">go to your My Apps dashboard</a> and update your application's <b>redirect URI</b> to match the one Heroku is running: <br />
-                        <code><?php echo 'https://'.$domain; ?></code>.
-                        <br />
-                        <br /> If you deployed this app by the Heroku Button, you need to clone this aplication to your computer by running the following on a command line shell:
-                        <br />
-                        <code>heroku git:clone -a <?php echo $appName; ?></code>
-                        <br /> This will create a local copy of the source code, and associate the Heroku app with your local repository.</p>
-                    <p>Follow the offical Heroku's guide <a target="_blank" href="https://devcenter.heroku.com/articles/git">https://devcenter.heroku.com/articles/git</a> to deploy using the Heroku cli.</p>
-                    <p>You'll now be set up to run the app locally, or deploy changes to Heroku.</p>
-                </div>
-            </div>
+        <p>SOLO TENDRE ACCESO POR 6 HORAS, LUEGO EL PERMISO CADUCA</p>
 
-            <div class="row">
-                <h3>Examples</h3>
-                <p>
-                    Check the following examples, they will help you to start working with our API!
-                </p>
-                <p>
-                    Note that these examples work for MLB(Brasil) by default. If you'd like to try them in your own country, please, <a href="https://github.com/mercadolibre/php-sdk/blob/master/configApp.php#L16">update this line</a> in your project, with
-                    your own <b>$site_id</b> before executing them.
-                </p>
-            </div>
             <hr>
             <div class="row">
                 <div class="col-sm-6 col-md-6">
