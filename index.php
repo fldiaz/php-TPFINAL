@@ -25,8 +25,8 @@ $appName = explode('.', $domain)[0];
             <a class="logo" href="#"><img src="/getting-started/logo-developers.png" alt=""></a>
             <nav>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a target="_blank" href="http://developers.mercadolibre.com/getting-started/">Getting Started</a></li>
-                    <li><a target="_blank" href="http://developers.mercadolibre.com/api-docs/">API Docs</a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/fldiaz/">Sobre mi</a></li>
+                    <li><a target="_blank" href="http://developers.mercadolibre.com/api-docs/">Sobre mi Trabajo Final</a></li>
                     <li><a target="_blank" href="http://developers.mercadolibre.com/community/">Community</a></li>
                 </ul>
             </nav>
@@ -34,8 +34,8 @@ $appName = explode('.', $domain)[0];
 
         <div class="header">
             <div>
-                <h1>Getting Started with Mercado Libre's PHP SDK</h1>
-                <h2>Official PHP SDK for Mercado Libre's API.</h2>
+                <h1>TRABAJO FINAL ESPECIALIZACIÓN EN CIENCIA DE DATOS</h1>
+                <h2>Uso de información alternativa en la evaluación del perfil crediticio mediante modelos de aprendizaje automáticos</h2>
             </div>
         </div>
 
