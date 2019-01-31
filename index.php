@@ -27,7 +27,6 @@ $appName = explode('.', $domain)[0];
                 <ul class="nav navbar-nav navbar-right">
                     <li><a target="_blank" href="https://www.linkedin.com/in/fldiaz/">Sobre mi</a></li>
                     <li><a target="_blank" href="http://developers.mercadolibre.com/api-docs/">Sobre mi Trabajo Final</a></li>
-                    <li><a target="_blank" href="http://developers.mercadolibre.com/community/">Community</a></li>
                 </ul>
             </nav>
         </header>
@@ -37,7 +36,8 @@ $appName = explode('.', $domain)[0];
                 <h1>Uso de información alternativa en la evaluación del perfil crediticio mediante modelos de aprendizaje automáticos</h1>
                 <h2>TRABAJO FINAL</h2>
                 <h2>ESPECIALIZACIÓN EN CIENCIA DE DATOS</h2>
-                <p>Alumna: Lic. Florencia Díaz</p>
+                
+                <H3>Alumna: Lic. Florencia Díaz</h3>
                 <p>Tutora del TFI: Dra. Silvia Gómez</p>
 
             </div>
@@ -48,7 +48,7 @@ $appName = explode('.', $domain)[0];
             <h4>Estoy realizando el trabajo final de la Especialización en Ciencia de Datos en el ITBA.</h4>
             <h4>Este trabajo tiene como objetivo identificar otras variables informativas que permitan mejorar o complementar el perfil crediticio de las personas que no acceden a servicios financieros formales, en pos de una mayor inclusión financiera.</h4>
             <h4>Simplemente necesito que me brindes autorización para recopilar tus datos relacionados con tu reputación sobre las compras y ventas realizdas a través de Mercado Libre, y así poder comprobar si esta información ayuda a mejorar el perfil crediticio de un individuo</h4>
-                el perfil crediticio de un individuo.</h4>
+                
         
         <center>SOLO TENDRE ACCESO POR 6 HORAS, LUEGO EL PERMISO CADUCA</center>
 
@@ -88,7 +88,7 @@ $appName = explode('.', $domain)[0];
                             print_r($_SESSION);
                         echo '</pre>';
                     } else {
-                        echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Authenticate</a></p>';
+                        echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">OK</a></p>';
                     }
                     ?>
 
@@ -130,34 +130,7 @@ $appName = explode('.', $domain)[0];
 
                 </div>
 
-                <div class="col-md-6">
-                    <h3>Get started!</h3>
-                    <p>Now you know how easy it is to get information from our API. Check the rest of the examples on the SDK, and modify them as you like in order to List an item, update it, and other actions.</p>
-                    <p><a class="btn" href="https://github.com/mercadolibre/php-sdk/tree/master/examples">More examples</a></p>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="row">
-                <h3>Your Credentials</h3>
-                <div class="row-info col-sm-3 col-md-3">
-                    <b>App_Id: </b>
-                    <?php echo $appId; ?>
-                </div>
-                <div class="row-info col-sm-3 col-md-3">
-                    <b>Secret_Key: </b>
-                    <?php echo $secretKey; ?>
-                </div>
-                <div class="row-info col-sm-3 col-md-3">
-                    <b>Redirect_URI: </b>
-                    <?php echo $redirectURI; ?>
-                </div>
-                <div class="row-info col-sm-3 col-md-3">
-                    <b>Site_Id: </b>
-                    <?php echo $siteId; ?>
-                </div>
-            </div>
+              
             <hr>
         </main>
     </body>
