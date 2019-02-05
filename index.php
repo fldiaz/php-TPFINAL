@@ -22,7 +22,7 @@ $appName = explode('.', $domain)[0];
 
     <body>
         <header class="navbar">
-            <a class="logo" href="#"><img src="/getting-started/logo-developers.png" alt=""></a>
+            
             <nav>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a target="_blank" href="https://www.linkedin.com/in/fldiaz/">Sobre mi</a></li>
