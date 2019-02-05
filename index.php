@@ -112,6 +112,27 @@ $appName = explode('.', $domain)[0];
                                 echo "Exception: ",  $e->getMessage(), "\n";
                             }
                         }
+                        <?php
+                           # callback que procesa
+
+                        if( $_GET["access_token"] && $_GET["expires_in"] && $_GET["user_id"] && $_GET["domains"] )
+	                     {
+	                    $_SESSION["mercadolibre_token"]= $_GET["access_token"]; # genero el access_token para uso en toda la plataforma
+
+	                     # actualizacion en BDD para guardar los datos de mercado
+	                     $trama= array(
+			             "id"=>"'". proteger_cadena($_SESSION["SUPERID"]). "'",  # id del USUARIO en mi BDD
+			             "mercadolibre_id"=>"'". proteger_cadena($_GET["user_id"]). "'",
+			             "mercadolibre_token"=>"'". proteger_cadena($_GET["access_token"]). "'",
+			             "mercadolibre_expire"=>"'". proteger_cadena(($_GET["expires_in"]+time())). "'"
+		                   );
+
+	                      if( !actualizar_bdd( "USUARIOS", $trama ) ) # mi funcion de guardar
+		                  echo '<div class="msg_error">Problemas para actualizar datos.</div>';
+	                      else 	echo '<div class="msg_exito">Cuenta de mercadolibre asociada con exito.</div>';
+	                       }
+ 
+                         ?>
                         // We construct the item to POST
                         $params = array();
                         $url = '/sites/' . $siteId;
