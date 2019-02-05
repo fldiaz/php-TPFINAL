@@ -10,9 +10,10 @@
             </nav>
         </header>
 
-  Uso de información alternativa en la evaluación del perfil crediticio mediante modelos de aprendizaje automáticos
-  TRABAJO FINAL
-  ESPECIALIZACIÓN EN CIENCIA DE DATOS
+Uso de información alternativa en la evaluación del perfil crediticio mediante modelos de aprendizaje automáticos
+  
+TRABAJO FINAL
+ESPECIALIZACIÓN EN CIENCIA DE DATOS
                 
 Alumna: Lic. Florencia Díaz
 Tutora del TFI: Dra. Silvia Gómez
