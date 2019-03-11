@@ -6,9 +6,9 @@ $meli = new Meli($appId, $secretKey);
 
 $params = array();
 
-$url = '/sites/' . $siteId;
+$url = '/sites/' . $token;
 
-$result = $meli->get($url, $params);
+$result = $meli->get($url, access_token='.$token, $params);
 
 echo '<pre>';
 print_r($result);
