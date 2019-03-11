@@ -95,40 +95,7 @@ $appName = explode('.', $domain)[0];
                 </div>
             </div>
             <hr>
-                    <?php
-                    $meli = new Meli($appId, $secretKey);
-                    if($_GET['code']) {
-                        // If the code was in get parameter we authorize
-                        $user = $meli->authorize($_GET['code'], $redirectURI);
-                        // Now we create the sessions with the authenticated user
-                        $_SESSION['access_token'] = $user['body']->access_token;
-                        $_SESSION['expires_in'] = $user['body']->expires_in;
-                        $_SESSION['refresh_token'] = $user['body']->refresh_token;
-                        // We can check if the access token in invalid checking the time
-                        if($_SESSION['expires_in'] + time() + 1 < time()) {
-                            try {
-                                print_r($meli->refreshAccessToken());
-                            } catch (Exception $e) {
-                                echo "Exception: ",  $e->getMessage(), "\n";
-                            }
-                        }
-                        <?php
-                    ?>
-                        // We construct the item to POST
-                        $params = array();
-                        $url = '/sites/' . $siteId;
-                        $result = $meli->get('/users', $params, array('access_token' => $_SESSION['access_token']));
-                        // We call the post request to list a item
-                        echo '<pre>';
-                        print_r($response);
-                        echo '</pre>';
-                
-                  } else if($_GET['code']) {
-                        echo '<p><a alt="Publish Item" class="btn" href="/?code='.$_GET['code'].'&publish_item=ok">Publish Item</a></p>';
-                  } else {
-                        echo '<p><a alt="Publish Item" class="btn disable" href="#">Publish Item</a> </p>';
-                    }
-                    ?>
+                    
 
 
                 </div>
