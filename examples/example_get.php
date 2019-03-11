@@ -23,5 +23,5 @@ if($_GET['code']) {
 	print_r($meli->get('/users/me', $params, true);
 	echo '</pre>';
 } else {
-	echo '<a href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL['MLA']) . '">Login using MercadoLibre oAuth 2.0</a>';
+	echo '<a href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Login using MercadoLibre oAuth 2.0</a>';
 }
