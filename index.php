@@ -84,6 +84,7 @@ $appName = explode('.', $domain)[0];
                                 }
                             }
                         }
+                        $user = $meli->get('/users/me', array('access_token' => $access_token));
                         echo '<pre>';
                             print_r($_SESSION);
                         echo '</pre>';
