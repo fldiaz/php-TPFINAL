@@ -132,21 +132,7 @@ $appName = explode('.', $domain)[0];
 	               else 	echo '<div class="msg_exito">Cuenta de mercadolibre asociada con exito.</div>';
 	                }
                     ?>
-                        // We construct the item to POST
-                        $params = array();
-                        $url = '/sites/' . $siteId;
-                        $result = $meli->get('/users', $params, array('access_token' => $_SESSION['access_token']));
-                        // We call the post request to list a item
-                        echo '<pre>';
-                        print_r($response);
-                        echo '</pre>';
-                
-                  } else if($_GET['code']) {
-                        echo '<p><a alt="Publish Item" class="btn" href="/?code='.$_GET['code'].'&publish_item=ok">Publish Item</a></p>';
-                  } else {
-                        echo '<p><a alt="Publish Item" class="btn disable" href="#">Publish Item</a> </p>';
-                    }
-                    ?>
+  
 
                 </div>
 
