@@ -91,7 +91,7 @@ $appName = explode('.', $domain)[0];
                         echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">OK</a></p>';
                     }
                     ?>
-
+            
                 </div>
                 
                 <div class="col-sm-6 col-md-6">
