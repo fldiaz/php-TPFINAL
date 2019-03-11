@@ -4,12 +4,10 @@ require '../configApp.php';
 
 $meli = new Meli($appId, $secretKey);
 
-$params = array();
+$params = array('access_token' => $access_token);
 
-$url = '/sites/' . $token;
-
-$result = $meli->get($url, access_token='.$token, $params);
-
+$result = $meli->get('/users/me', $params, true); 
 echo '<pre>';
 print_r($result);
 echo '</pre>';
+
