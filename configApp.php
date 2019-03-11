@@ -15,6 +15,8 @@ $redirectURI = getenv('Redirect_URI');
 If you don't know your site_id go to our sites resources: https://api.mercadolibre.com/sites  */
 $siteId = 'MLA';
 
+/* Base de datos.
+$DATABASE_URL = 'postgres://xjubydasnrqhgz:30500059e50b99a49091dc7c5629414026f4dc5127988245a6f8a668882d242a@ec2-54-225-121-235.compute-1.amazonaws.com:5432/d8dcgc3t7r73g4'
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
