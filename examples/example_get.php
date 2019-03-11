@@ -20,7 +20,7 @@ if($_GET['code']) {
 	}
 	$params = array('access_token' => $_SESSION['access_token']);
 	echo '<pre>';
-	print_r($meli->get('/users/me', $params, true););
+	print_r($meli->get('/users/me', $params, true);
 	echo '</pre>';
 } else {
 	echo '<a href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL['MLA']) . '">Login using MercadoLibre oAuth 2.0</a>';
