@@ -15,9 +15,14 @@ $redirectURI = getenv('Redirect_URI');
 If you don't know your site_id go to our sites resources: https://api.mercadolibre.com/sites  */
 $siteId = 'MLA';
 
-/* Base de datos.
-$DATABASE_URL = 'postgres://xjubydasnrqhgz:30500059e50b99a49091dc7c5629414026f4dc5127988245a6f8a668882d242a@ec2-54-225-121-235.compute-1.amazonaws.com:5432/d8dcgc3t7r73g4'
-
+/* Base de datos.*/
+$db_handle = getenv('DATABASE_URL')
+$db_query = "SELECT token, refresh_token";
+$db_result = pg_query($db_query);
+$db_myrow = pg_fetch_assoc($db_result);
+    //Get tokens
+    $token = $db_myrow[token];﻿
+    $refresh_token = $db_myrow[refresh_token];
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //If you don't use Heroku use the next config
