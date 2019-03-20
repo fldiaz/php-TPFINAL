@@ -26,7 +26,6 @@ $appName = explode('.', $domain)[0];
             <nav>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a target="_blank" href="https://www.linkedin.com/in/fldiaz/">Sobre mi</a></li>
-                    <li><a target="_blank" href="http://developers.mercadolibre.com/api-docs/">Sobre mi Trabajo Final</a></li>
                 </ul>
             </nav>
         </header>
@@ -93,12 +92,6 @@ $appName = explode('.', $domain)[0];
                     }
                     ?>
             
-                </div>
-                
-                <div class="col-sm-6 col-md-6">
-                    <h3>Get site</h3>
-                    <p>Make a simple GET to <a href="https://api.mercadolibre.com/sites">sites resource</a> with your <b>$site_id</b> to obtain information about a a site. Like id, name, currencies, categories, and other settings.</p>
-                    <p><a class="btn" href="../examples/example_get.php">GET</a></p>
                 </div>
             </div>
             <hr>
