@@ -103,7 +103,7 @@ $appName = explode('.', $domain)[0];
                         ////////////////////////////////
                         //hacer el insert $_SESSION['access_token']; $_SESSION['expires_in'];$_SESSION['refresh_token']
                         
-                        $query = "INSERT INTO usuarios VALUES (id, token, expiration, refresh) values ('". $acceso ."','".$expera."','". $reacceso."');";
+                        $query = "INSERT INTO usuarios VALUES (token, expiration, refresh) values ('". $acceso ."','".$expera."','". $reacceso."');";
                         $result = pg_query($query); 
                         
                         /////////////// para probar errores en insert
@@ -114,7 +114,6 @@ $appName = explode('.', $domain)[0];
                         }
                         pg_close($dbconn);
 
-                        */
                         $user = $meli->get('/users/me', array('access_token' => $access_token));
                         echo '<pre>';
                             print_r($_SESSION);
