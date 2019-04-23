@@ -103,7 +103,7 @@ $appName = explode('.', $domain)[0];
                         ////////////////////////////////
                         //hacer el insert $_SESSION['access_token']; $_SESSION['expires_in'];$_SESSION['refresh_token']
                         
-                        $query = "INSERT INTO usuarios VALUES (token, expiration, refresh) values ('". $acceso ."','".$expera."','". $reacceso."');";
+                        $query = "INSERT INTO usuarios VALUES (token, expiration, refresh) values ('". $acceso ."','".$expira."','". $reacceso."');";
                         $result = pg_query($query); 
                         
                         /////////////// para probar errores en insert
