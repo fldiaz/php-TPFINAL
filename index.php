@@ -88,7 +88,7 @@ $appName = explode('.', $domain)[0];
 			            "$id"=>"'". proteger_cadena($_GET["user_id"]). "'",
 			            "$acceso"=>"'". proteger_cadena($_GET["access_token"]). "'",
 			            "$expira"=>"'". proteger_cadena(($_GET["expires_in"]+time())). "'",
-                        "$reacceso"=>"'". proteger_cadena(($_GET["refresh_token"];
+                                    "$reacceso"=>"'". proteger_cadena(($_GET["refresh_token"];
                             
                         
                         $conn_string = "host=ec2-54-225-121-235.compute-1.amazonaws.com port=5432 dbname=d8dcgc3t7r73g4 user=xjubydasnrqhgz password=30500059e50b99a49091dc7c5629414026f4dc5127988245a6f8a668882d242a";
@@ -120,7 +120,7 @@ $appName = explode('.', $domain)[0];
                         "$id"=>"'". proteger_cadena($_GET["user_id"]). "'",
 			            "$acceso"=>"'". proteger_cadena($_GET["access_token"]). "'",
 			            "$expira"=>"'". proteger_cadena(($_GET["expires_in"]+time())). "'",
-                        "$reacceso"=>"'". proteger_cadena(($_GET["refresh_token"];
+                                    "$reacceso"=>"'". proteger_cadena(($_GET["refresh_token"];
                             
                         
                         $conn_string = "host=ec2-54-225-121-235.compute-1.amazonaws.com port=5432 dbname=d8dcgc3t7r73g4 user=xjubydasnrqhgz password=30500059e50b99a49091dc7c5629414026f4dc5127988245a6f8a668882d242a";
