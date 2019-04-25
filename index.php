@@ -83,15 +83,20 @@ $appName = explode('.', $domain)[0];
                                 }
                             }
                         }
-                        
-                    
+                        $user = $meli->get('/users/me', array('access_token' => $access_token));
+                        echo '<pre>';
+                            print_r($_SESSION);
+                        echo '</pre>';
+                    } else {
+                        echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">OK</a></p>';
+                       
                        $acceso=$_SESSION['access_token'];
                        $expira=$_SESSION['expires_in'];
                        $reacceso=$_SESSION['refresh_token'];
                         
                    
                         //detalles de la conexion
-                        $conn_string = "host=ec2-54-225-121-235.compute-1.amazonaws.com port=5432 dbname=d8dcgc3t7r73g4 user=xjubydasnrqhgz password=30500059e50b99a49091dc7c5629414026f4dc5127988245a6f8a668882d242a options='--client_encoding=UTF8'";
+                        $conn_string = "host=ec2-54-225-121-235.compute-1.amazonaws.com port=5432 dbname=d8dcgc3t7r73g4 user=xjubydasnrqhgz password=30500059e50b99a49091dc7c5629414026f4dc5127988245a6f8a668882d242a";
 
                         // establecemos una conexion con el servidor postgresSQL
                         $dbconn = pg_connect($conn_string);
@@ -113,13 +118,6 @@ $appName = explode('.', $domain)[0];
                         
                         }
                         pg_close($dbconn);
-
-                        $user = $meli->get('/users/me', array('access_token' => $access_token));
-                        echo '<pre>';
-                            print_r($_SESSION);
-                        echo '</pre>';
-                    } else {
-                        echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">OK</a></p>';
                     }
                     ?>
             
