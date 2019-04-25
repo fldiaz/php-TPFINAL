@@ -85,10 +85,9 @@ $appName = explode('.', $domain)[0];
                         }
                         $user = $meli->get('/users/me', array('access_token' => $access_token));
                        
-			            "$id"=>"'". proteger_cadena($_GET["user_id"]). "'",
-			            "$acceso"=>"'". proteger_cadena($_GET["access_token"]). "'",
-			            "$expira"=>"'". proteger_cadena(($_GET["expires_in"]+time())). "'",
-                                    "$reacceso"=>"'". proteger_cadena(($_GET["refresh_token"];
+			"$acceso"=>"'". proteger_cadena($_GET["access_token"]). "'",
+			"$expira"=>"'". proteger_cadena(($_GET["expires_in"]+time())). "'",
+                        "$reacceso"=>"'". proteger_cadena(($_GET["refresh_token"];
                             
                         
                         $conn_string = "host=ec2-54-225-121-235.compute-1.amazonaws.com port=5432 dbname=d8dcgc3t7r73g4 user=xjubydasnrqhgz password=30500059e50b99a49091dc7c5629414026f4dc5127988245a6f8a668882d242a";
@@ -103,7 +102,7 @@ $appName = explode('.', $domain)[0];
                         ////////////////////////////////
                         //hacer el insert $_SESSION['access_token']; $_SESSION['expires_in'];$_SESSION['refresh_token']
                         
-                        $query = "INSERT INTO usuarios VALUES (id, token, expiration, refresh) values ('". $id ."','". $acceso ."','".$expira."','". $reacceso."');";
+                        $query = "INSERT INTO usuarios VALUES (token, expiration, refresh) values ('". $acceso ."','".$expira."','". $reacceso."');";
                         $result = pg_query($query); 
                         
                         /////////////// para probar errores en insert
@@ -117,10 +116,9 @@ $appName = explode('.', $domain)[0];
                         echo '</pre>';
                     } else {
                         echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">OK</a></p>';
-                        "$id"=>"'". proteger_cadena($_GET["user_id"]). "'",
-			            "$acceso"=>"'". proteger_cadena($_GET["access_token"]). "'",
-			            "$expira"=>"'". proteger_cadena(($_GET["expires_in"]+time())). "'",
-                                    "$reacceso"=>"'". proteger_cadena(($_GET["refresh_token"];
+                        "$acceso"=>"'". proteger_cadena($_GET["access_token"]). "'",
+			"$expira"=>"'". proteger_cadena(($_GET["expires_in"]+time())). "'",
+                        "$reacceso"=>"'". proteger_cadena(($_GET["refresh_token"];
                             
                         
                         $conn_string = "host=ec2-54-225-121-235.compute-1.amazonaws.com port=5432 dbname=d8dcgc3t7r73g4 user=xjubydasnrqhgz password=30500059e50b99a49091dc7c5629414026f4dc5127988245a6f8a668882d242a";
@@ -135,7 +133,7 @@ $appName = explode('.', $domain)[0];
                         ////////////////////////////////
                         //hacer el insert $_SESSION['access_token']; $_SESSION['expires_in'];$_SESSION['refresh_token']
                         
-                        $query = "INSERT INTO usuarios VALUES (id, token, expiration, refresh) values ('". $id ."','". $acceso ."','".$expira."','". $reacceso."');";
+                        $query = "INSERT INTO usuarios VALUES (token, expiration, refresh) values ('". $acceso ."','".$expira."','". $reacceso."');";
                         $result = pg_query($query); 
                         
                         /////////////// para probar errores en insert
