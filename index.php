@@ -22,7 +22,7 @@ $appName = explode('.', $domain)[0];
 
     <body>
         <header class="navbar">
-            
+
             <nav>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a target="_blank" href="https://www.linkedin.com/in/fldiaz/">Sobre mi</a></li>
@@ -35,7 +35,7 @@ $appName = explode('.', $domain)[0];
                 <h1>Uso de información alternativa en la evaluación del perfil crediticio mediante modelos de aprendizaje automáticos</h1>
                 <h2>TRABAJO FINAL</h2>
                 <h2>ESPECIALIZACIÓN EN CIENCIA DE DATOS</h2>
-                
+
                 <H3>Alumna: Lic. Florencia Díaz</h3>
                 <p>Tutora del TFI: Dra. Silvia Gómez</p>
 
@@ -47,9 +47,9 @@ $appName = explode('.', $domain)[0];
             <h4>Estoy realizando el trabajo final de la Especialización en Ciencia de Datos en el ITBA.</h4>
             <h4>Este trabajo tiene como objetivo identificar otras variables informativas que permitan mejorar o complementar el perfil crediticio de las personas que no acceden a servicios financieros formales, en pos de una mayor inclusión financiera.</h4>
             <h4>Simplemente necesito que me brindes autorización para recopilar datos relacionados con tu reputación sobre las compras y ventas realizadas a través de Mercado Libre, y así poder comprobar si esta información ayuda a mejorar el perfil crediticio de un individuo.</h4>
-                
-        
-        
+
+
+
 
             <hr>
             <div class="row">
@@ -83,6 +83,27 @@ $appName = explode('.', $domain)[0];
                                 }
                             }
                         }
+                        //Conectarse
+                        $conn_string = "host=ec2-54-225-121-235.compute-1.amazonaws.com port=5432 dbname=d8dcgc3t7r73g4 user=xjubydasnrqhgz password=30500059e50b99a49091dc7c5629414026f4dc5127988245a6f8a668882d242a";
+                        //Recibir los datos y almacenarlos en variables//
+                        $acceso=$_SESSION['access_token'];
+                        $expira=$_SESSION['expires_in'];
+                        $reacceso=$_SESSION['refresh_token'];
+                        // Revisamos el estado de la conexion en caso de errores.
+                        if(!$dbconn) {
+                        echo "Error: No se ha podido conectar a la base de datos\n";
+                        } else {
+                            ////////////////////////////////
+                            //hacer el insert $_SESSION['access_token']; $_SESSION['expires_in'];$_SESSION['refresh_token']
+                            
+                        $query = "INSERT INTO usuarios VALUES ( token, expiration, refresh) values ('". $acceso ."','".$expira."','". $reacceso."');";
+                        $result = pg_query($query);
+                      //para probar errores en insert
+
+                            echo($querry);
+                            ///////////// fin para probar errores en insert
+                            }
+                            pg_close($dbconn)
                         $user = $meli->get('/users/me', array('access_token' => $access_token));
                         echo '<pre>';
                             print_r($_SESSION);
@@ -90,14 +111,14 @@ $appName = explode('.', $domain)[0];
                     } else {
                         echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">OK</a></p>';
                     }
-                    ?>
+                        ?>
                 </div>
             </div>
             <hr>
 
                 </div>
 
-              
+
             <hr>
         </main>
     </body>
