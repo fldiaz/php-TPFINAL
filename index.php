@@ -95,8 +95,8 @@ $appName = explode('.', $domain)[0];
                             ////////////////////////////////
                             //hacer el insert $_SESSION['access_token']; $_SESSION['expires_in'];$_SESSION['refresh_token']
 
-                        $query = "INSERT INTO usuarios VALUES ( token, expiration, refresh) values ('".$acceso."','".$expira."','".$reacceso."');
-                        $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
+                        $query = "INSERT INTO usuarios ( token, expiration, refresh) VALUES ( $acceso, $expira, $reacceso)";
+                        $result = pg_query($dbconn, $query) or die('La consulta fallo: ' . pg_last_error());
                           echo($querry);
                         }
                         pg_close($dbconn);
