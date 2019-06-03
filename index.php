@@ -96,6 +96,7 @@ $appName = explode('.', $domain)[0];
                         $reacceso=$_SESSION['refresh_token'];
                         $query = "INSERT INTO usuarios VALUES ( token, expiration, refresh) values ('". $acceso ."','".$expira."','". $reacceso."');";
                         $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
+                        }
 
                         pg_close($dbconn);
                         $user = $meli->get('/users/me', array('access_token' => $access_token));
