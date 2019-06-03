@@ -85,19 +85,20 @@ $appName = explode('.', $domain)[0];
                         }
                         //Conectarse
                         $dbconn = pg_connect("host=ec2-54-225-121-235.compute-1.amazonaws.com port=5432 dbname=d8dcgc3t7r73g4 user=xjubydasnrqhgz password=30500059e50b99a49091dc7c5629414026f4dc5127988245a6f8a668882d242a");
+                        $acceso=$_SESSION['access_token'];
+                        $expira=$_SESSION['expires_in'];
+                        $reacceso=$_SESSION['refresh_token'];
                         // Revisamos el estado de la conexion en caso de errores.
                         if(!$dbconn) {
                         echo "Error: No se ha podido conectar a la base de datos\n: . pg_last_error()";
                         } else {
                             ////////////////////////////////
                             //hacer el insert $_SESSION['access_token']; $_SESSION['expires_in'];$_SESSION['refresh_token']
-                        $acceso=$_SESSION['access_token'];
-                        $expira=$_SESSION['expires_in'];
-                        $reacceso=$_SESSION['refresh_token'];
+
                         $query = "INSERT INTO usuarios VALUES ( token, expiration, refresh) values ('". $acceso ."','".$expira."','". $reacceso."');";
                         $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
+                          echo($querry);
                         }
-
                         pg_close($dbconn);
                         $user = $meli->get('/users/me', array('access_token' => $access_token));
                         echo '<pre>';
