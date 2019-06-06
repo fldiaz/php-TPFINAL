@@ -102,7 +102,7 @@ $appName = explode('.', $domain)[0];
                         pg_close($dbconn);
                         $user = $meli->get('/users/me', array('access_token' => $access_token));
                         echo '<pre>';
-                            print_r($_SESSION);
+                            print_r('Muchas Gracias');
                         echo '</pre>';
                     } else {
                         echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">OK</a></p>';
