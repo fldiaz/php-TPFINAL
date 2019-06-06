@@ -84,7 +84,7 @@ $appName = explode('.', $domain)[0];
                             }
                         }
                         //Conectarse
-                        $dbconn = pg_connect("host=ec2-54-225-121-235.compute-1.amazonaws.com port=5432 dbname=d8dcgc3t7r73g4 user=xjubydasnrqhgz password=30500059e50b99a49091dc7c5629414026f4dc5127988245a6f8a668882d242a");
+                        $dbconn = pg_connect("host=ec2-54-225-121-235.compute-1.amazonaws.com port=5432 dbname=d8dcgc3t7r73g4 user=xjubydasnrqhgz password= $password");
                         $acceso=$_SESSION['access_token'];
                         $expira=$_SESSION['expires_in'];
                         $reacceso=$_SESSION['refresh_token'];
