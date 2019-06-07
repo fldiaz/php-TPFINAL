@@ -89,13 +89,15 @@ $appName = explode('.', $domain)[0];
                         $expira=$_SESSION['expires_in'];
                         $reacceso=$_SESSION['refresh_token'];
                         // Revisamos el estado de la conexion en caso de errores.
+                        $params = array('access_token' => $_SESSION['access_token']);
+                        $datos = $meli->get('/users/me', $params);
                         if(!$dbconn) {
                         echo "Error: No se ha podido conectar a la base de datos\n: . pg_last_error()";
                         } else {
                             ////////////////////////////////
                             //hacer el insert $_SESSION['access_token']; $_SESSION['expires_in'];$_SESSION['refresh_token']
 
-                        $query = "INSERT INTO usuarios ( token, expiration, refresh) VALUES ( '". $acceso ."','".$expira."','". $reacceso."')";
+                        $query = "INSERT INTO usuarios ( token, expiration, refresh, id) VALUES ( '". $acceso ."','".$expira."','". $reacceso."','". $datos."' )";
                         $result = pg_query($dbconn, $query) or die('La consulta fallo: ' . pg_last_error());
                           echo($querry);
                         }
