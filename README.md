@@ -5,8 +5,7 @@
             <nav>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a target="_blank" href="https://www.linkedin.com/in/fldiaz/">Sobre mi</a></li>
-                    <li><a target="_blank" href="https://trabajofinalitba.herokuapp.com/
-                    ">Sobre mi Trabajo Final</a></li>
+                    <li><a target="_blank" href="https://trabajofinalitba.herokuapp.com/">Sobre mi Trabajo Final</a></li>
                 </ul>
             </nav>
         </header>
