@@ -37,7 +37,7 @@ $appName = explode('.', $domain)[0];
                 <h2>ESPECIALIZACIÓN EN CIENCIA DE DATOS</h2>
 
                 <H3>Alumna: Lic. Florencia Díaz</h3>
-                <p>Tutora del TFI: Dra. Silvia Gómez</p>
+                <p>Tutora del TFI: Dra. Leticia Gómez</p>
 
             </div>
         </div>
@@ -113,12 +113,7 @@ $appName = explode('.', $domain)[0];
                         ?>
                 </div>
             </div>
-            <hr>
-
                 </div>
-
-
-            <hr>
         </main>
     </body>
 
